@@ -1,0 +1,1 @@
+ssh -i ~/pem-files/sensa_prod.pem ubuntu@ec2-44-196-14-226.compute-1.amazonaws.com

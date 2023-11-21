@@ -1,0 +1,91 @@
+@import "mixing";
+
+
+.cashflowContainer{
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+
+
+    .cashflowFilter{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+}
+
+.cashflowTable{
+    .rdt_TableHead{
+        background-color: var(--bs-black);
+      color: var(--bs-white);
+    }
+}
+
+
+
+// .cashflowTable__0_PcV{
+
+//     .rdt_TableHeadRow{
+//       background-color: var(--bs-black);
+//       color: var(--bs-white);
+  
+      
+//     }
+//     .rdt_TableRow .rdt_TableCell{
+//       //border-right: 0.1rem solid #dcdcdc;
+//       background-color: var(--bs-white);
+//       &:first-child{
+//         border-left: 0.1rem solid var(--bs-border-color2);
+//       }
+//       &:last-child{
+//         border-right: 0.1rem solid var(--bs-border-color2);
+//       }
+  
+//       [class^=icon-], [class*=" icon-"]{
+//         font-size: 1.8rem;
+//         margin: 0 0.5rem 0 0;
+//         display: inline-block;
+//         cursor: pointer;
+  
+//         &.disabled{
+//           cursor: not-allowed !important;
+  
+//           &::before{
+//             color: var(--bs-border-color);
+//           }
+//         }
+  
+//      }
+//     }
+//     .rdt_TableRow:last-child{
+//       border-bottom: 0.1rem solid var(--bs-border-color2);  
+//     }
+  
+//       .rdt_TableRow:nth-child(even) .rdt_TableCell{
+//         background-color: var(--primary-light);
+//       }
+//   }
+
+
+
+//   .app.dark{
+
+
+//     .cashflow_cashflowTable__0_PcV .rdt_TableHeadRow{
+//         background-color: var(--table-header-color);
+//     }
+
+//     .cashflowContainer .cashflowFilter .react-datepicker-wrapper input{
+//         background-color: var(--white-transparent);
+//         color: var(--bs-white);
+//     }
+
+//     .cashflowContainer .cashflowFilter .calendar-icon svg path{
+//         fill:var(--switch-bgcolor);
+//     }
+
+
+//   }

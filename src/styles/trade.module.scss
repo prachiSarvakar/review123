@@ -1,0 +1,358 @@
+@import "mixing";
+
+.stockInfo {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  > div:first-child {
+    position: relative;
+    background-color: var(--primary-light);
+    border: 0.1rem solid var(--primary-border);
+    border-radius: 0.5rem;
+    width: 4rem;
+    height: 4rem;
+    padding: 0.5rem;
+    margin-right: 1.5rem;
+    overflow: hidden;
+    img {
+      object-fit: contain;
+      width: 85% !important;
+      height: 85% !important;
+      left: 7.5% !important;
+      top: 7.5% !important;
+      mix-blend-mode: multiply;
+    }
+  }
+
+  
+  h3 {
+    font-weight: 500;
+    line-height: 1;
+    font-size: 1.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    margin-right: 0.5rem;
+    @include breakpoint(large-desktop-min) {
+      font-size: 2rem;
+    }
+    @include breakpoint(mobile) {
+      margin: 0 0 0.5rem 0;
+    }
+    span {
+      font-weight: 400;
+      margin-left: 0.5rem;
+      font-size: 1.2rem;
+      @include breakpoint(large-desktop-min) {
+        font-size: 1.4rem;
+      }
+      @include breakpoint(mobile) {
+        margin: 0.5rem;
+      }
+    }
+  }
+  .info {
+    display: flex;
+    align-items: flex-end;
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .stockName {
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .priceMain {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    @include breakpoint(mobile) {
+      margin-left: 0;
+    }
+    .currency {
+      color: var(--bs-gray-400);
+      font-size: 1.6rem;
+      @include breakpoint(large-desktop-min) {
+        font-size: 1.8rem;
+      }
+    }
+    .price {
+      margin: 0 0.8rem 0 0.3rem;
+      font-size: 1.6rem;
+      @include breakpoint(large-desktop-min) {
+        font-size: 1.8rem;
+      }
+    }
+    .change {
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+      @include breakpoint(large-desktop-min) {
+        font-size: 1.3rem;
+      }
+      img {
+        margin-left: 0.4rem;
+      }
+    }
+    @include breakpoint(mobile) {
+      margin-bottom: 0.5rem;
+    }
+  }
+  .editIcon {
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 0.1rem solid var(--bs-border-color);
+    cursor: pointer;
+  }
+}
+
+
+.stockDetails {
+  background-color: var(--bs-bg-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 2rem 1.5rem 0.5rem;
+  align-items: center;
+  @include breakpoint(mobile-large) {
+    flex-direction: column;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+    flex-wrap: wrap;
+    li {
+      display: block;
+      padding: 0 1.5rem;
+      position: relative;
+      font-size: var(--bs-body-font-size);
+      @include breakpoint(large-desktop-min) {
+        font-size: 1.6rem;
+      }
+      @include breakpoint(mobile) {
+        width: 50%;
+        margin-bottom: 0.5rem;
+      }
+      &:after {
+        content: "";
+        width: 0.1rem;
+        height: 100%;
+        background-color: var(--bs-border-color);
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+      label {
+        display: block;
+        font-weight: 400;
+        font-size: 1.2rem;
+        @include breakpoint(large-desktop-min) {
+          font-size: 1.3rem;
+        }
+      }
+      strong {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.stockMain {
+  .stockinformation {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .btn {
+      padding: 0.8rem;
+      span {
+        margin: 0;
+      }
+    }
+    //margin-bottom: 1.5rem;
+    @include breakpoint(mobile) {
+      align-items: center;
+      margin-bottom: 0;
+    }
+    .priceMain {
+      display: flex;
+      align-items: center;
+      .currency {
+        color: var(--bs-gray-400);
+        font-size: 1.8rem;
+        @include breakpoint(large-desktop-min) {
+          font-size: 2rem;
+        }
+      }
+      .price {
+        margin: 0 0.8rem 0 0.3rem;
+        font-size: 2.2rem;
+        @include breakpoint(large-desktop-min) {
+          font-size: 2.4rem;
+        }
+      }
+      .change {
+        display: flex;
+        align-items: center;
+        img {
+          margin-left: 0.4rem;
+        }
+      }
+      @include breakpoint(mobile) {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
+
+.tradeLanding {
+  background-image: linear-gradient(#ffffff, #fff4e0);
+  padding: 5rem 3rem;
+  text-align: center;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.LandingList {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  padding: 4rem 2rem;
+  h6 {
+    font-weight: 400;
+    font-size: var(--bs-body-font-size);
+    @include breakpoint(large-desktop-min) {
+      font-size: 1.6rem;
+    }
+  }
+  .recentSearch {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 1rem;
+    .searchItem {
+      display: flex;
+      align-items: center;
+      width: calc(25% - 0.9rem);
+      border: 0.1rem solid var(--primary-border);
+      border-radius: var(--bs-border-radius);
+      padding: 1.2rem;
+      cursor: pointer;
+      @include breakpoint(mobile) {
+        width: calc(50% - 0.9rem);
+      }
+      @include breakpoint(mobile-max) {
+        width: 100%;
+      }
+      .logo {
+        position: relative;
+        background-color: var(--primary-light);
+        border: 0.1rem solid var(--primary-border);
+        border-radius: 0.5rem;
+        width: 6rem;
+        height: 6rem;
+        padding: 1rem;
+        margin-right: 1.5rem;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          object-fit: contain;
+          width: 85% !important;
+          height: 85% !important;
+          left: 7.5% !important;
+          top: 7.5% !important;
+          mix-blend-mode: multiply;
+        }
+      }
+      .ItemInfo {
+        width: calc(100% - 8rem);
+        .Name {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: 1.6rem;
+          @include breakpoint(large-desktop-min) {
+            font-size: 1.8rem;
+          }
+          span {
+            font-weight: 400;
+            font-size: var(--bs-body-font-size);
+            @include breakpoint(large-desktop-min) {
+              font-size: 1.6rem;
+            }
+          }
+        }
+        .priceMain {
+          font-size: 1.6rem;
+          @include breakpoint(large-desktop-min) {
+            font-size: 1.8rem;
+          }
+          .currency {
+            color: var(--light-color);
+            margin-right: 0.2rem;
+          }
+          .change {
+            margin-left: 0.5rem;
+            font-size: 1.3rem;
+            @include breakpoint(large-desktop-min) {
+              font-size: 1.4rem;
+            }
+            span {
+              margin-left: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.landingPage {
+  h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 2.4rem;
+    @include breakpoint(large-desktop-min) {
+      font-size: 2.6rem;
+    }
+  }
+  button {
+    padding: 1rem 2rem 1.3rem;
+    span {
+      margin-left: 1rem;
+      margin-top: 0.3rem;
+    }
+  }
+}
+
+.disabledSwiper {
+  color: #999;
+  cursor: not-allowed;
+}
+
+.letterLogoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.letterLogo {
+  display: flex;
+  font-size: 1rem !important;
+}
+
+.stockLogo {
+  display: flex;
+  justify-content: center;
+}

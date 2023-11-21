@@ -1,0 +1,274 @@
+@import 'mixing';
+
+.accountInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  position: relative;
+
+  @include breakpoint(mobile-large) {
+    flex-wrap: wrap;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+
+    @include breakpoint(mobile-large) {
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    li {
+      margin-right: 1rem;
+
+      @include breakpoint(mobile-large) {
+        margin-bottom: 0.5rem;
+      }
+
+      @include breakpoint(mobile) {
+        width: 50%;
+        margin: 0 0 1.5rem 0;
+        padding-right: 1rem;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      label {
+        width: 100%;
+      }
+
+      strong {
+        font-size: var(--bs-body-font-size);
+
+        @include breakpoint(large-desktop-min) {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+
+}
+
+.settingContainer {
+  .tabContent {
+    padding: 2rem;
+
+    label {
+      width: 100%;
+      margin-bottom: 0.5rem;
+
+      &+span {
+        width: 100%;
+        display: block;
+        margin-top: -0.5rem;
+        margin-bottom: 0.5rem;
+        font-weight: 300;
+        color: rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    .values {
+      margin-bottom: 1.5rem;
+      display: block;
+      font-size: var(--bs-body-font-size);
+
+      @include breakpoint(large-desktop-min) {
+        font-size: 1.6rem;
+      }
+    }
+
+    table {
+      text-align: left;
+      width: 100%;
+
+      thead {
+        th {
+          background-color: var(--bs-black);
+          color: var(--bs-white);
+          text-align: left;
+          padding: 1rem;
+          border: none;
+
+          &:first-child {
+            border-top-left-radius: var(--bs-border-radius);
+          }
+
+          &:last-child {
+            border-top-right-radius: var(--bs-border-radius);
+          }
+        }
+      }
+
+      tbody {
+        border: 0.1rem solid var(--bs-border-color);
+        border-bottom-left-radius: var(--bs-border-radius);
+        border-bottom-right-radius: var(--bs-border-radius);
+        overflow: hidden;
+
+        tr {
+          td {
+            text-align: left;
+            padding: 0.5rem 1rem;
+          }
+
+          &:last-child {
+            td {
+              &:first-child {
+                border-bottom-left-radius: var(--bs-border-radius);
+              }
+
+              &:last-child {
+                border-bottom-right-radius: var(--bs-border-radius);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.settingHeader {
+  display: flex;
+  justify-content: space-between;
+
+  @include breakpoint(mobile-large) {
+    flex-wrap: wrap;
+  }
+
+  .rightHeader {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(mobile-max) {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .leftInfo {
+    display: flex;
+    position: relative;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    align-items: center;
+
+    @include breakpoint(mobile-max) {
+      flex-wrap: wrap;
+    }
+
+    &:after {
+      width: 0.1rem;
+      height: 2rem;
+      background-color: var(--bs-border-color);
+      content: '';
+      right: 0;
+      position: absolute;
+    }
+
+    button {
+      margin: 0 1rem;
+    }
+
+    strong {
+      white-space: nowrap;
+    }
+
+    // @include breakpoint(mobile-large){
+    //   margin-right:5rem;
+    //   flex-wrap: wrap;
+    // }
+  }
+
+  .logout {
+    width: 3.5rem;
+    height: 3.5rem;
+
+    span {
+      margin: 0;
+    }
+
+    // @include breakpoint(mobile-large){
+    //   position: absolute;
+    //   right:1.5rem;
+    //   top:2rem;
+    // }
+  }
+}
+
+.JournalTable {
+  tr {
+
+    td,
+    th {
+      &:first-child {
+        width: 40%;
+
+        @include breakpoint(ipad) {
+          width: 25rem;
+          min-width: 25rem;
+        }
+      }
+
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7) {
+        width: 10%;
+
+        @include breakpoint(ipad) {
+          width: 9rem;
+          min-width: 9rem;
+        }
+      }
+    }
+  }
+
+}
+
+.TradingJournal {
+  @include breakpoint(ipad) {
+    overflow-x: auto;
+    overflow-y: inherit;
+  }
+
+  .InfoLogo {
+    .stockInfo {
+      display: inline-flex;
+      align-items: center;
+
+      .logo {
+        position: relative;
+        background-color: var(--primary-light);
+        border: 0.1rem solid var(--primary-border);
+        border-radius: 0.5rem;
+        width: 6rem;
+        height: 6rem;
+        padding: 0.5rem;
+        margin-right: 1.5rem;
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: middle;
+
+        img {
+          object-fit: contain;
+          width: 100% !important;
+          height: 100% !important;
+          left: 7.5% !important;
+          top: 7.5% !important;
+          mix-blend-mode: multiply;
+        }
+      }
+    }
+
+    .JournalTable {
+      margin-bottom: 0;
+    }
+  }
+}

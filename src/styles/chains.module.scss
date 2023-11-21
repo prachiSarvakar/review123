@@ -1,0 +1,212 @@
+@import "mixing";
+.notes{
+    display: flex;
+    justify-content: space-between;
+    padding:1rem 1.5rem;
+    border-top:0.1rem solid var(--bs-border-color);
+    border-bottom:0.1rem solid var(--bs-border-color);
+    align-items: center;
+    @include breakpoint(mobile) {
+        flex-wrap: wrap;
+      }
+    p{
+        margin: 0;
+    }
+    span{
+        color:var(--bs-primary);
+    }
+    .left{
+        display: flex;
+        align-items: center;
+        .StickeWidth{
+            border-left:0.1rem solid var(--primary-border);
+            padding-left:1rem;
+            margin-left: 1rem;
+            select{
+                padding:0.3rem 1rem 0.3rem 0.3rem;
+                margin-left:0.5rem;
+                border-radius:var(--bs-border-radius);
+                border-color:var(--primary-border);
+                background-color: var(--primary-light);
+                font-size: 1.3rem;
+                @include breakpoint(large-desktop-min){
+                    font-size: var(--bs-body-font-size);
+                }
+            }
+            .clear{
+                cursor: not-allowed;
+                &__act{
+                    cursor: pointer;
+                    color: var(--bs-primary);
+                }
+            }
+        }
+        
+        @include breakpoint(mobile) {
+            width:100%;
+            margin-bottom:1rem;
+        }
+        @include breakpoint(mobile-max){
+            flex-wrap: wrap;
+            .StickeWidth{
+                width:100%;
+                margin-left:0;
+                margin-top:0.5rem;
+                border:none;
+                padding: 0;
+            }
+        }
+    }
+}
+.ChainTable{
+    padding:0 0 1rem 0;
+    width:100%;
+    overflow-x: auto;
+    overflow-y: visible;
+    max-height:calc(100vh - 41rem);
+    width: calc(100% - 4rem);
+    position: fixed;
+    &::-webkit-scrollbar{
+        display: none;  
+    }
+    @include breakpoint(ipad){
+        overflow-x: auto;
+        overflow-y: inherit;
+        max-height:inherit;
+        width:100%;
+        position: static;
+    }
+    .tableheader{
+        display:flex;
+        padding:1rem 1.5rem 0.5rem;
+        position: sticky;
+        top:0;
+        background-color:var(--bs-bg-2);
+        z-index:10;
+        & > div{
+            font-weight:600;
+            font-size:var(--bs-body-font-size);
+            text-transform: uppercase;
+            @include breakpoint(large-desktop-min){
+                font-size:1.6rem;
+              }
+            &:first-child{
+                width:calc(50% + 2rem);
+                @include breakpoint(ipad){
+                    min-width:70rem;
+                }
+            }
+        }
+    }
+    .table{
+        border:none;
+    }
+    .callsTable,
+    .putsTable{
+        @include breakpoint(ipad){
+            min-width:70rem;
+        }
+    }
+    // If we wants to revert UI then we can uncomment below code and revert old UI 
+    // .dark{
+    //     background-color:var(--bs-secondary);
+    //     color:var(--light-primary);
+    // }
+    // .primary{
+    //     color:var(--bs-secondary);
+    //     background-color:var(--light-primary);
+    // }
+    // .grey{
+    //     color:var(--bs-secondary);
+    //     background-color:#F9F8F7;
+    // }
+    thead{
+        th{
+            padding:0.5rem;
+            text-align: center;
+            border-right:0.1rem solid var(--bs-border-color);
+            white-space: pre;
+            vertical-align: middle;
+            position: sticky;
+            top:3rem;
+            z-index:10;
+            border-bottom: 0.1rem solid var(--bs-border-color);
+            font-weight:500;
+            background-color:var(--bs-secondary);
+            color:var(--bs-white);
+            // &:first-child{
+            //     border-top-left-radius: 0.8rem;
+            // }
+            // &:nth-child(10){
+            //     border-top-right-radius: 0.8rem;
+            // }
+            &:nth-child(11){
+              
+                position: sticky;
+                top:3rem;
+                z-index:10;
+                padding:0;
+                vertical-align: top;
+                border: 0.1rem solid var(--bs-border-color);
+                background-color:var(--bs-bg-2);
+                color: var(--bs-secondary);
+                // span{
+                //     display:block;
+                //     border-bottom: 0;
+                //     // border-top-left-radius: 0.8rem;
+                //     // border-top-right-radius: 0.8rem;
+                //     //height:5.1rem;
+                //     //line-height:5.1rem;
+                // }
+                span{
+                    line-height:4rem;
+                }
+            }
+            // &:nth-child(12){
+            //     border-top-left-radius: 0.8rem;
+            // }
+            // &:last-child{
+            //     border-top-right-radius: 0.8rem;
+            // }
+        }
+        td{
+            background-color: transparent !important;
+            font-weight:500 !important;
+            text-align: left !important;
+            border:none;
+            font-size: 1.6rem !important;
+            @include breakpoint(large-desktop-min){
+                font-size: 1.8rem !important;
+            }
+        }
+    }
+    tbody{
+        tr:nth-child(even){
+            td{
+                &:nth-child(11){
+                    background-color:var(--primary-light);
+                }
+            }
+        }
+    }
+    .callTable{
+        tbody{
+            tr{
+                td{
+                    background-color: var(--primaryLight);
+                    &:last-child{
+                        background-color: var(--primary2);
+                    }
+                }
+            }
+        }
+    }
+    .chainStrikeTr{
+        td{
+            background-color: var(--primaryLight);
+        }
+    }
+    .chainStrikeValueTr{
+        background-color: var(--primary2) !important;
+    }
+}

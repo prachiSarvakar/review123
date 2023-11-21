@@ -1,0 +1,391 @@
+$icomoon-font-family: "icomoon" !default;
+$icomoon-font-path: "../../fonts" !default;
+
+$icon-info: "\e92f";
+$icon-columns: "\e92e";
+$icon-wishlist-filled: "\e901";
+$icon-wishlist: "\e92d";
+$icon-amend: "\e927";
+$icon-area_chart: "\e928";
+$icon-do_not_disturb_on: "\e929";
+$icon-forward_circle: "\e92a";
+$icon-library_add: "\e92b";
+$icon-stylus: "\e92c";
+$icon-refresh: "\e926";
+$icon-done: "\e907";
+$icon-lock_open: "\e921";
+$icon-lock_close: "\e922";
+$icon-calendar: "\e923";
+$icon-arrows: "\e924";
+$icon-sigma: "\e925";
+$icon-add_circle: "\e91d";
+$icon-exchange: "\e91e";
+$icon-remove_circle: "\e91f";
+$icon-scan: "\e920";
+$icon-analysis: "\e91c";
+$icon-delete: "\e916";
+$icon-fullscreen: "\e915";
+$icon-next: "\e913";
+$icon-previous: "\e914";
+$icon-close: "\e917";
+$icon-sync: "\e918";
+$icon-edit: "\e919";
+$icon-person: "\e91a";
+$icon-close_fullscreen: "\e91b";
+$icon-cancel: "\e910";
+$icon-directional: "\e911";
+$icon-natural: "\e912";
+$icon-arrow: "\e90e";
+$icon-double_arrow: "\e90f";
+$icon-table: "\e903";
+$icon-chart_data: "\e905";
+$icon-link: "\e906";
+$icon-bear: "\e908";
+$icon-bull: "\e909";
+$icon-down: "\e90a";
+$icon-up: "\e90b";
+$icon-sell: "\e900";
+// $icon-wishlist: "\e901";
+$icon-buy: "\e902";
+$icon-login: "\e904";
+$icon-search: "\e90c";
+$icon-arrow-outward: "\e90d";
+
+@font-face {
+    font-family: '#{$icomoon-font-family}';
+    src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?wxhgxz');
+    src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?wxhgxz#iefix') format('embedded-opentype'),
+      url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?wxhgxz') format('truetype'),
+      url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?wxhgxz') format('woff'),
+      url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?wxhgxz##{$icomoon-font-family}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: '#{$icomoon-font-family}' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-info {
+    &:before {
+      content: $icon-info;     
+      color: #b58426;
+    }
+  }
+  .icon-columns {
+    &:before {
+      content: $icon-columns;     
+      color: #c8a24e;
+    }
+  }
+  .icon-wishlist-filled {
+    &:before {
+      content: $icon-wishlist-filled; 
+    }
+  }
+  .icon-wishlist {
+    &:before {
+      content: $icon-wishlist; 
+    }
+  }
+  .icon-amend {
+    &:before {
+      content: $icon-amend;     
+      color: #2dadf5;
+    }
+  }
+  .icon-area_chart {
+    &:before {
+      content: $icon-area_chart;     
+      color: #b58426;
+    }
+  }
+  .icon-do_not_disturb_on {
+    &:before {
+      content: $icon-do_not_disturb_on;     
+      color: #b58426;
+    }
+  }
+  .icon-forward_circle {
+    &:before {
+      content: $icon-forward_circle;     
+      color: #b58426;
+    }
+  }
+  .icon-library_add {
+    &:before {
+      content: $icon-library_add;     
+      color: #b58426;
+    }
+  }
+  .icon-stylus {
+    &:before {
+      content: $icon-stylus;     
+      color: #e2d308;
+    }
+  }
+  .icon-refresh {
+    &:before {
+      content: $icon-refresh;     
+      color: #b58426;
+    }
+  }
+  .icon-done {
+    &:before {
+      content: $icon-done;     
+      color: #fff;
+    }
+  }
+  .icon-lock_close {
+    &:before {
+      content: $icon-lock_close;     
+      color: #b58426;
+    }
+  }
+  .icon-lock_open {
+    &:before {
+      content: $icon-lock_open;     
+      color: #b58426;
+    }
+  }
+  .icon-calendar {
+    &:before {
+      content: $icon-calendar;     
+      color: #b58426;
+    }
+  }
+  .icon-arrows {
+    &:before {
+      content: $icon-arrows;     
+      color: #fff;
+    }
+  }
+  .icon-sigma {
+    &:before {
+      content: $icon-sigma;     
+      color: #fff;
+    }
+  }
+  .icon-add_circle {
+    &:before {
+      content: $icon-add_circle;     
+      color: #c8a24e;
+    }
+  }
+  .icon-exchange {
+    &:before {
+      content: $icon-exchange;     
+      color: #c8a24e;
+    }
+  }
+  .icon-remove_circle {
+    &:before {
+      content: $icon-remove_circle;     
+      color: #d93f3f;
+    }
+  }
+  .icon-scan {
+    &:before {
+      content: $icon-scan;     
+      color: #c8a24e;
+    }
+  }
+  .icon-analysis {
+    &:before {
+      content: $icon-analysis;     
+      color: #b58426;
+    }
+  }
+  .icon-delete {
+    &:before {
+      content: $icon-delete;     
+      color: #d93f3f;
+    }
+  }
+.icon-fullscreen {
+  &:before {
+    content: $icon-fullscreen;     
+    color: #b58426;
+  }
+}
+.icon-next {
+  &:before {
+    content: $icon-next;     
+    color: #b58426;
+  }
+}
+.icon-previous {
+  &:before {
+    content: $icon-previous;     
+    color: #b58426;
+  }
+}
+.icon-close {
+  &:before {
+    content: $icon-close;     
+    color: #d93f3f;
+  }
+}
+.icon-sync {
+  &:before {
+    content: $icon-sync;     
+    color: #b58426;
+  }
+}
+.icon-person {
+  &:before {
+    content: $icon-person;     
+    color: #b58426;
+  }
+}
+.icon-close_fullscreen {
+  &:before {
+    content: $icon-close_fullscreen;     
+    color: #b58426;
+  }
+}
+  .icon-cancel {
+    &:before {
+      content: $icon-cancel;     
+      color: #d93f3f;
+    }
+  }
+  .icon-directional {
+    &:before {
+      content: $icon-directional;     
+      color: #fff;
+    }
+  }
+  .icon-natural {
+    &:before {
+      content: $icon-natural;     
+      color: #fff;
+      transform: scale(0.85);
+    }
+  }
+  .icon-arrow {
+    &:before {
+      content: $icon-arrow;     
+      color: #b58426;
+    }
+  }
+  .icon-double_arrow {
+    &:before {
+      content: $icon-double_arrow;     
+      color: #38ad4b;
+    }
+    &.red{
+      &::before{
+        color: #D93F3F;
+      }
+    }
+  }
+  .icon-table {
+    &:before {
+      content: $icon-table;     
+      color: #b58426;
+    }
+  }
+  .icon-chart_data {
+    &:before {
+      content: $icon-chart_data;     
+      color: #b58426;
+    }
+  }
+  .icon-link {
+    &:before {
+      content: $icon-link;     
+      color: #b58426;
+      transform: scale(0.7) translateY(0.3rem);
+    }
+  }
+  .icon-edit {
+    &:before {
+      content: $icon-edit;     
+      color: #b58426;
+    }
+  }
+  .icon-bear {
+    &:before {
+      content: $icon-bear;     
+      color: #b58426;
+    }
+  }
+  .icon-bull {
+    &:before {
+      content: $icon-bull;     
+      color: #b58426;
+    }
+  }
+  .icon-down {
+    &:before {
+      content: $icon-down;     
+      color: #b58426;
+    }
+    &.down{
+      &::before{
+        color: var(--bs-danger);
+      }
+    }
+  }
+  .icon-up {
+    &:before {
+      content: $icon-up;     
+      color: #b58426;
+    }
+    &.up{
+      &::before{
+        color: var(--bs-success);
+      }
+    }
+  }
+  .icon-sell {
+    &:before {
+      content: $icon-sell;     
+      color: #b58426;
+    }
+  }
+  .icon-wishlist {
+    &:before {
+      content: $icon-wishlist;     
+      color: #b58426;
+    }
+  }
+  .icon-buy {
+    &:before {
+      content: $icon-buy;     
+      color: #b58426;
+    }
+  }
+  .icon-login {
+    &:before {
+      content: $icon-login;     
+      color: #b58426;
+    }
+  }
+  .icon-search {
+    &:before {
+      content: $icon-search;     
+      color: #d6b468;
+    }
+  }
+  .icon-arrow-outward {
+    &:before {
+      content: $icon-arrow-outward;     
+      color: #b58426;
+    }
+  }
+  
+  
